@@ -1,0 +1,6 @@
+[submodule "openarm_teleop"]
+	path = openarm_teleop
+	url = git@github.com:enactic/openarm_teleop.git
+[submodule "openarm_can"]
+	path = openarm_can
+	url = git@github.com:enactic/openarm_can.git
