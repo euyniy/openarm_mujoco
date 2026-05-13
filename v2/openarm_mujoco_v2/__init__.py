@@ -20,8 +20,8 @@ def openarm_bimanual_paths() -> list[str]:
     the other required files/directories.
     """
     return [
-        asset_path("openarm_bimanual.xml"),
-        asset_path("meshes"),
+        asset_path("openarm_v20_bimanual.xml"),
+        asset_path("assets"),
     ]
 
 def openarm_cell_xml() -> str:
