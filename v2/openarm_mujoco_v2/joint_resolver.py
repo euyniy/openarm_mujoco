@@ -65,8 +65,7 @@ class JointResolver:
 
     Built once from a MjModel by resolving joint and actuator names, so it
     works with any MJCF that follows the openarm_left_* / openarm_right_*
-    naming convention. Lifter mapping is optional and only available when
-    openarm_lifter_joint / lifter_ctrl exist in the model.
+    naming convention.
 
     Usage::
 
@@ -77,25 +76,19 @@ class JointResolver:
     """
 
     def __init__(self, model: mujoco.MjModel) -> None:
-        self._right  = _resolve_arm("openarm_right_",  model)
-        self._left   = _resolve_arm("openarm_left_",   model)
+        self._right = _resolve_arm("openarm_right_", model)
+        self._left  = _resolve_arm("openarm_left_",  model)
 
-        jid = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_JOINT, "openarm_lifter_joint")
-        self._lifter: int | None = int(model.jnt_qposadr[jid]) if jid >= 0 else None
-
-        self._right_ctrl:  np.ndarray = _resolve_arm_ctrl("right",  model)
-        self._left_ctrl:   np.ndarray = _resolve_arm_ctrl("left",   model)
-        aid = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, "lifter_ctrl")
-        self._lifter_ctrl: int | None = aid if aid >= 0 else None
+        self._right_ctrl: np.ndarray = _resolve_arm_ctrl("right", model)
+        self._left_ctrl:  np.ndarray = _resolve_arm_ctrl("left",  model)
 
     def set_qpos(self, qpos: np.ndarray, driver_position: np.ndarray, segment: str) -> np.ndarray:
         """Write driver values for one segment into qpos in-place.
 
         Args:
             qpos: Full nq-slot qpos array to update (modified in-place).
-            driver_position: 8-element array (joints[0:7] + gripper[7]) for arms,
-                or 1-element array / scalar for "lifter" (single prismatic joint).
-            segment: One of "right", "left", "lifter".
+            driver_position: 8-element array (joints[0:7] + gripper[7]).
+            segment: One of "right", "left".
 
         Returns:
             The same qpos array (modified in-place).
@@ -108,10 +101,6 @@ class JointResolver:
             qpos[self._left.arm_qpos]    = driver_position[:7]
             qpos[self._left.finger_qpos] = driver_position[7]
             qpos[self._left.mirror_qpos] = driver_position[7]
-        elif segment == "lifter":
-            if self._lifter is None:
-                raise ValueError("Segment 'lifter' is unavailable: 'openarm_lifter_joint' not found in model")
-            qpos[self._lifter] = driver_position[0]
         else:
             raise ValueError(f"Invalid segment: {segment!r}")
         return qpos
@@ -137,9 +126,8 @@ class JointResolver:
 
         Args:
             ctrl: Full nu-slot ctrl array to update (modified in-place).
-            driver_position: 8-element array (joints[0:7] + gripper[7]) for arms,
-                or 1-element array / scalar for "lifter".
-            segment: One of "right", "left", "lifter".
+            driver_position: 8-element array (joints[0:7] + gripper[7]).
+            segment: One of "right", "left".
 
         Returns:
             The same ctrl array (modified in-place).
@@ -148,10 +136,6 @@ class JointResolver:
             ctrl[self._right_ctrl] = driver_position[:8]
         elif segment == "left":
             ctrl[self._left_ctrl] = driver_position[:8]
-        elif segment == "lifter":
-            if self._lifter_ctrl is None:
-                raise ValueError("Segment 'lifter' is unavailable: 'lifter_ctrl' not found in model")
-            ctrl[self._lifter_ctrl] = driver_position[0]
         else:
             raise ValueError(f"Invalid segment: {segment!r}")
         return ctrl
@@ -161,7 +145,7 @@ class JointResolver:
 
         Args:
             qpos: Full nq-slot qpos array.
-            segment: One of "right", "left", "lifter", "bimanual".
+            segment: One of "right", "left", "bimanual".
 
         Returns:
             (joints, gripper) where joints is shape (7,) for a single arm or
@@ -172,10 +156,6 @@ class JointResolver:
             return qpos[self._right.arm_qpos], qpos[self._right.finger_qpos]
         elif segment == "left":
             return qpos[self._left.arm_qpos], qpos[self._left.finger_qpos]
-        elif segment == "lifter":
-            if self._lifter is None:
-                raise ValueError("Segment 'lifter' is unavailable: 'openarm_lifter_joint' not found in model")
-            return qpos[self._lifter]
         elif segment == "bimanual":
             return (
                 np.concatenate([qpos[self._right.arm_qpos], qpos[self._left.arm_qpos]]),
