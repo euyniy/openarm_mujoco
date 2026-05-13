@@ -159,18 +159,18 @@
       <geom name="link0_0_left_vis" type="mesh" class="visual" mesh="link0_0_left" quat="0 0 1 0" material="matte_black" />
       <geom name="link0_1_left_vis" type="mesh" class="visual" mesh="link0_1_left" quat="0 0 1 0" material="metal_silver" />
       <geom name="link0_2_left_vis" type="mesh" class="visual" mesh="link0_2_left" quat="0 0 1 0" material="metal_silver" />
-      <inertial pos="-0.00253124 0.0258186 -2.70658e-05" quat="-1.46856942085e-06 0.70739772103 0.706815721259 2.1457591538e-05" mass="0.487785" diaginertia="0.000682401 0.000484734 0.000320236" />
+      <inertial pos="-0.00253124 0.0258186 -2.70658e-05" quat="-1.46856942085e-06 0.70739772103 0.706815721259 2.1457591538e-05" mass="1.14323" diaginertia="0.00159935 0.00113608 0.000750542" />
       <geom name="base_link_left_collision_00" type="mesh" mesh="base_link_left_collision_00" class="collision" quat="0 0 1 0" />
       <body name="openarm_left_link1" pos="0 0.0625 0">
         <geom name="link1_0_left_vis" type="mesh" class="visual" mesh="link1_0_left" material="matte_black" />
         <geom name="link1_1_left_vis" type="mesh" class="visual" mesh="link1_1_left" material="matte_black" />
         <geom name="link1_2_left_vis" type="mesh" class="visual" mesh="link1_2_left" material="matte_black" />
-        <inertial pos="0.00090035 0.044466 2.88441e-05" quat="0.999901 -0.000371041 -5.04627e-05 -0.0140338" mass="0.561429" diaginertia="0.000538275 0.000373215 0.000329804" />
+        <inertial pos="0.00090035 0.044466 2.88441e-05" quat="0.999901 -0.000371041 -5.04627e-05 -0.0140338" mass="1.14167" diaginertia="0.00109459 0.000758935 0.000670659" />
         <joint name="openarm_left_joint1" pos="0 0 0" axis="0 1 0" range="-3.4907 1.3963" actuatorfrcrange="-40 40" class="motor_DM8009" />
         <geom name="link1_left_collision_00" type="mesh" mesh="link1_left_collision_00" class="collision" />
         <body name="openarm_left_link2" pos="0 0.06 0">
           <geom name="link2_0_left_vis" type="mesh" class="visual" mesh="link2_0_left" material="matte_black" />
-          <inertial pos="-0.0247185 -7.60578e-08 -0.0312643" quat="0.999342 -6.47495e-06 -0.0362804 3.02331e-06" mass="0.295593" diaginertia="0.000164001 0.00012043 8.72594e-05" />
+          <inertial pos="-0.0247185 -7.60578e-08 -0.0312643" quat="0.999342 -6.47495e-06 -0.0362804 3.02331e-06" mass="0.277509" diaginertia="0.000153968 0.000113062 8.19211e-05" />
           <joint name="openarm_left_joint2" pos="0 0 0" axis="-1 0 0" range="-3.3161 0.17453" actuatorfrcrange="-40 40" class="motor_DM8009" />
           <geom name="link2_left_collision_00" type="mesh" mesh="link2_left_collision_00" class="collision" />
           <body name="openarm_left_link3" pos="0 0 -0.06625">
@@ -181,7 +181,7 @@
             <geom name="link3_4_left_vis" type="mesh" class="visual" mesh="link3_4_left" material="matte_black" />
             <geom name="link3_5_left_vis" type="mesh" class="visual" mesh="link3_5_left" material="matte_black" />
             <geom name="link3_6_left_vis" type="mesh" class="visual" mesh="link3_6_left" material="matte_black" />
-            <inertial pos="-0.00300862 -0.000514813 -0.109368" quat="0.998906 -0.00891348 0.0458105 0.00280505" mass="0.850917" diaginertia="0.00102663 0.000903622 0.000438477" />
+            <inertial pos="-0.00300862 -0.000514813 -0.109368" quat="0.998906 -0.00891348 0.0458105 0.00280505" mass="1.07386" diaginertia="0.00129561 0.00114038 0.000553361" />
             <joint name="openarm_left_joint3" pos="0 0 0" axis="0 0 -1" range="-1.5708 1.5708" actuatorfrcrange="-27 27" class="motor_DM4340" />
             <geom name="link3_left_collision_00" type="mesh" mesh="link3_left_collision_00" class="collision" />
             <body name="openarm_left_link4" pos="0 0 -0.15375">
@@ -189,20 +189,20 @@
               <geom name="link4_1_left_vis" type="mesh" class="visual" mesh="link4_1_left" material="matte_black" />
               <geom name="link4_2_left_vis" type="mesh" class="visual" mesh="link4_2_left" material="metal_silver" />
               <geom name="link4_3_left_vis" type="mesh" class="visual" mesh="link4_3_left" material="metal_silver" />
-              <inertial pos="-0.00310326 -0.00136539 -0.0574601" quat="0.996952 0.00947325 0.00348083 0.0773554" mass="0.590846" diaginertia="0.000437321 0.000403091 0.000228141" />
+              <inertial pos="-0.00310326 -0.00136539 -0.0574601" quat="0.996952 0.00947325 0.00348083 0.0773554" mass="0.634853" diaginertia="0.000469894 0.000433114 0.000245134" />
               <joint name="openarm_left_joint4" pos="0 0 0" axis="0 -1 0" range="0 2.4435" actuatorfrcrange="-27 27" class="motor_DM4340" />
               <geom name="link4_left_collision_00" type="mesh" mesh="link4_left_collision_00" class="collision" />
               <body name="openarm_left_link5" pos="0 0 -0.0955">
                 <geom name="link5_0_left_vis" type="mesh" class="visual" mesh="link5_0_left" material="matte_black" />
                 <geom name="link5_1_left_vis" type="mesh" class="visual" mesh="link5_1_left" material="metal_silver" />
-                <inertial pos="-0.000737189 0.000412407 -0.0470938" quat="0.685547 -0.0023482 -0.00297125 0.728019" mass="0.580397" diaginertia="0.000315624 0.000263454 0.000166538" />
+                <inertial pos="-0.000737189 0.000412407 -0.0470938" quat="0.685547 -0.0023482 -0.00297125 0.728019" mass="0.615659" diaginertia="0.000334799 0.00027946 0.000176657" />
                 <joint name="openarm_left_joint5" pos="0 0 0" axis="0 0 -1" range="-1.5708 1.5708" actuatorfrcrange="-7 7" class="motor_DM4310" />
                 <geom name="link5_left_collision_00" type="mesh" mesh="link5_left_collision_00" class="collision" />
                 <geom name="link5_left_collision_01" type="mesh" mesh="link5_left_collision_01" class="collision" />
                 <geom name="link5_left_collision_02" type="mesh" mesh="link5_left_collision_02" class="collision" />
                 <body name="openarm_left_link6" pos="0 0 -0.1205">
                   <geom name="link6_0_left_vis" type="mesh" class="visual" mesh="link6_0_left" material="matte_black" />
-                  <inertial pos="2.27438e-05 -0.000686496 5.44e-05" quat="0.999832 -0.0183155 0.000397003 -0.000757974" mass="0.368168" diaginertia="0.000138896 0.00010556 0.000104856" />
+                  <inertial pos="2.27438e-05 -0.000686496 5.44e-05" quat="0.999832 -0.0183155 0.000397003 -0.000757974" mass="0.475203" diaginertia="0.000179276 0.000136249 0.000135339" />
                   <joint name="openarm_left_joint6" pos="0 0 0" axis="0 -1 0" range="-0.7854 0.7854" actuatorfrcrange="-7 7" class="motor_DM4310" />
                   <geom name="link6_left_collision_00" type="mesh" mesh="link6_left_collision_00" class="collision" />
                   <body name="openarm_left_ee_base_link">
@@ -244,18 +244,18 @@
       <geom name="link0_0_right_vis" type="mesh" class="visual" mesh="link0_0_right" quat="0 0 1 0" material="matte_black" />
       <geom name="link0_1_right_vis" type="mesh" class="visual" mesh="link0_1_right" quat="0 0 1 0" material="metal_silver" />
       <geom name="link0_2_right_vis" type="mesh" class="visual" mesh="link0_2_right" quat="0 0 1 0" material="metal_silver" />
-      <inertial pos="-0.00253124 -0.0258186 -2.70658e-05" quat="2.1457591538e-05 0.706815721259 0.70739772103 -1.46856942085e-06" mass="0.487785" diaginertia="0.000682401 0.000484734 0.000320236" />
+      <inertial pos="-0.00253124 -0.0258186 -2.70658e-05" quat="2.1457591538e-05 0.706815721259 0.70739772103 -1.46856942085e-06" mass="1.14323" diaginertia="0.00159935 0.00113608 0.000750542" />
       <geom name="base_link_right_collision_00" type="mesh" mesh="base_link_right_collision_00" class="collision" quat="0 0 1 0" />
       <body name="openarm_right_link1" pos="0 -0.0625 0">
         <geom name="link1_0_right_vis" type="mesh" class="visual" mesh="link1_0_right" material="matte_black" />
         <geom name="link1_1_right_vis" type="mesh" class="visual" mesh="link1_1_right" material="matte_black" />
         <geom name="link1_2_right_vis" type="mesh" class="visual" mesh="link1_2_right" material="matte_black" />
-        <inertial pos="0.00090035 -0.044466 2.88441e-05" quat="0.999901 0.000371041 -5.04627e-05 0.0140338" mass="0.561429" diaginertia="0.000538275 0.000373215 0.000329804" />
+        <inertial pos="0.00090035 -0.044466 2.88441e-05" quat="0.999901 0.000371041 -5.04627e-05 0.0140338" mass="1.14167" diaginertia="0.00109459 0.000758935 0.000670659" />
         <joint name="openarm_right_joint1" pos="0 0 0" axis="0 -1 0" range="-1.3963 3.4907" actuatorfrcrange="-40 40" class="motor_DM8009" />
         <geom name="link1_right_collision_00" type="mesh" mesh="link1_right_collision_00" class="collision" />
         <body name="openarm_right_link2" pos="0 -0.06 0">
           <geom name="link2_0_right_vis" type="mesh" class="visual" mesh="link2_0_right" material="matte_black" />
-          <inertial pos="-0.0247185 7.60578e-08 -0.0312643" quat="0.999342 6.47495e-06 -0.0362804 -3.02331e-06" mass="0.295593" diaginertia="0.000164001 0.00012043 8.72594e-05" />
+          <inertial pos="-0.0247185 7.60578e-08 -0.0312643" quat="0.999342 6.47495e-06 -0.0362804 -3.02331e-06" mass="0.277509" diaginertia="0.000153968 0.000113062 8.19211e-05" />
           <joint name="openarm_right_joint2" pos="0 0 0" axis="-1 0 0" range="-0.17453 3.3161" actuatorfrcrange="-40 40" class="motor_DM8009" />
           <geom name="link2_right_collision_00" type="mesh" mesh="link2_right_collision_00" class="collision" />
           <body name="openarm_right_link3" pos="0 0 -0.06625">
@@ -266,7 +266,7 @@
             <geom name="link3_4_right_vis" type="mesh" class="visual" mesh="link3_4_right" material="matte_black" />
             <geom name="link3_5_right_vis" type="mesh" class="visual" mesh="link3_5_right" material="matte_black" />
             <geom name="link3_6_right_vis" type="mesh" class="visual" mesh="link3_6_right" material="matte_black" />
-            <inertial pos="-0.00300862 -0.000514813 -0.109368" quat="0.998906 -0.00891348 0.0458105 0.00280505" mass="0.850917" diaginertia="0.00102663 0.000903622 0.000438477" />
+            <inertial pos="-0.00300862 -0.000514813 -0.109368" quat="0.998906 -0.00891348 0.0458105 0.00280505" mass="1.07386" diaginertia="0.00129561 0.00114038 0.000553361" />
             <joint name="openarm_right_joint3" pos="0 0 0" axis="0 0 -1" range="-1.5708 1.5708" actuatorfrcrange="-27 27" class="motor_DM4340" />
             <geom name="link3_right_collision_00" type="mesh" mesh="link3_right_collision_00" class="collision" />
             <body name="openarm_right_link4" pos="0 0 -0.15375">
@@ -274,20 +274,20 @@
               <geom name="link4_1_right_vis" type="mesh" class="visual" mesh="link4_1_right" material="matte_black" />
               <geom name="link4_2_right_vis" type="mesh" class="visual" mesh="link4_2_right" material="metal_silver" />
               <geom name="link4_3_right_vis" type="mesh" class="visual" mesh="link4_3_right" material="metal_silver" />
-              <inertial pos="-0.00310326 -0.00136539 -0.0574601" quat="0.996952 0.00947325 0.00348083 0.0773554" mass="0.590846" diaginertia="0.000437321 0.000403091 0.000228141" />
+              <inertial pos="-0.00310326 -0.00136539 -0.0574601" quat="0.996952 0.00947325 0.00348083 0.0773554" mass="0.634853" diaginertia="0.000469894 0.000433114 0.000245134" />
               <joint name="openarm_right_joint4" pos="0 0 0" axis="0 -1 0" range="0 2.4435" actuatorfrcrange="-27 27" class="motor_DM4340" />
               <geom name="link4_right_collision_00" type="mesh" mesh="link4_right_collision_00" class="collision" />
               <body name="openarm_right_link5" pos="0 0 -0.0955">
                 <geom name="link5_0_right_vis" type="mesh" class="visual" mesh="link5_0_right" material="matte_black" />
                 <geom name="link5_1_right_vis" type="mesh" class="visual" mesh="link5_1_right" material="metal_silver" />
-                <inertial pos="-0.000737189 -0.000412407 -0.0470938" quat="0.728019 -0.00297125 -0.0023482 0.685547" mass="0.580397" diaginertia="0.000315624 0.000263454 0.000166538" />
+                <inertial pos="-0.000737189 -0.000412407 -0.0470938" quat="0.728019 -0.00297125 -0.0023482 0.685547" mass="0.615659" diaginertia="0.000334799 0.00027946 0.000176657" />
                 <joint name="openarm_right_joint5" pos="0 0 0" axis="0 0 -1" range="-1.5708 1.5708" actuatorfrcrange="-7 7" class="motor_DM4310" />
                 <geom name="link5_right_collision_00" type="mesh" mesh="link5_right_collision_00" class="collision" />
                 <geom name="link5_right_collision_01" type="mesh" mesh="link5_right_collision_01" class="collision" />
                 <geom name="link5_right_collision_02" type="mesh" mesh="link5_right_collision_02" class="collision" />
                 <body name="openarm_right_link6" pos="0 0 -0.1205">
                   <geom name="link6_0_right_vis" type="mesh" class="visual" mesh="link6_0_right" material="matte_black" />
-                  <inertial pos="2.27438e-05 0.000686496 5.44e-05" quat="0.999832 0.0183155 0.000397003 0.000757974" mass="0.368168" diaginertia="0.000138896 0.00010556 0.000104856" />
+                  <inertial pos="2.27438e-05 0.000686496 5.44e-05" quat="0.999832 0.0183155 0.000397003 0.000757974" mass="0.475203" diaginertia="0.000179276 0.000136249 0.000135339" />
                   <joint name="openarm_right_joint6" pos="0 0 0" axis="0 1 0" range="-0.7854 0.7854" actuatorfrcrange="-7 7" class="motor_DM4310" />
                   <geom name="link6_right_collision_00" type="mesh" mesh="link6_right_collision_00" class="collision" />
                   <body name="openarm_right_ee_base_link">
