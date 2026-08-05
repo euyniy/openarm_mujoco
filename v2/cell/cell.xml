@@ -82,10 +82,10 @@ limitations under the License.
     <geom name="cell_rail_col2"       type="box" pos="0.0915 0 1.535"   size="0.0315 0.039 0.29"  class="cell_collision"/>
     <!-- <geom name="cell_rail_col"       type="box" pos="0.058 0 1.55"   size="0.003 0.03 0.3"  class="cell_collision"/> -->
 
-    <camera name="camera_ceiling" pos="0.245 0 1.8" xyaxes="0 -1 0 1 0 0"    fovy="66" resolution="960 600"/>
-    <!-- need to adjust x after lifter link is adjusted -->
-    <camera name="camera_head_left"    pos="0.223 0.0315 1.45"  xyaxes="0 -1 0 0.882948 0 0.469472" fovy="52" resolution="1280 720"/>
-    <camera name="camera_head_right"    pos="0.223 -0.0315 1.45"  xyaxes="0 -1 0 0.882948 0 0.469472" fovy="52" resolution="1280 720"/>
+    <!-- positions below are the CAD lens-barrel front faces; see dev/camera_audit -->
+    <camera name="camera_ceiling" pos="0.5262 0 1.7248" xyaxes="0 -1 0 1 0 0"    fovy="66" resolution="960 600"/>
+    <camera name="camera_head_left"    pos="0.2642 0.0315 1.4446"  xyaxes="0 -1 0 0.882948 0 0.469472" fovy="52" resolution="1280 720"/>
+    <camera name="camera_head_right"    pos="0.2642 -0.0315 1.4446"  xyaxes="0 -1 0 0.882948 0 0.469472" fovy="52" resolution="1280 720"/>
 
     <!-- lifter body: arms attach here and slide vertically -->
     <body name="openarm_lifter_link" pos="0.185 0 1.34">
